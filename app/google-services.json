@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "756371528997",
+    "project_id": "psyfi-eae82",
+    "storage_bucket": "psyfi-eae82.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756371528997:android:0da8c7c11625c33d5e0ecc",
+        "android_client_info": {
+          "package_name": "com.example.table"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "756371528997-rlvre1cb5rjve07i9ie637pmmi00h10c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXC1nRc-CliZ8CyO7PNlIwm2IOIWjYLok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "756371528997-rlvre1cb5rjve07i9ie637pmmi00h10c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appforev"
+    android:tag="chat"
+    tools:context=".chat">
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="wrap_content"
+        android:id="@+id/view_pager_home"
+        android:layout_height="wrap_content">
+
+
+    </androidx.viewpager.widget.ViewPager>
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/log_out"
+            android:background="@color/transperent"
+            android:scaleType="fitXY"
+            android:id="@+id/log_out_button"
+            android:layout_gravity="end"
+            app:tint="@color/yelforev">
+
+        </ImageButton>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:id="@+id/front_lay"
+                android:background="@color/appforev">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_above="@id/bottom_lay"
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Начните чат с психологом"
+                    android:gravity="center"
+                    android:textColor="@color/darkyel"
+                    android:textSize="28dp"
+                    android:id="@+id/welcome_text"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/bottom_lay"
+                    android:padding="8dp">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/message"
+                        android:textColor="@color/yelforev"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_toLeftOf="@id/send_btn"
+                        android:layout_marginEnd="20dp"
+                        android:textCursorDrawable="@drawable/edittext_cursor"
+                        android:background="@drawable/rounded_corner_for_edittext"/>
+
+                    <ImageButton
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="20dp"
+                        android:padding="8dp"
+                        android:background="@drawable/circle_send"
+                        android:src="@drawable/baseline_arrow_forward_ios_24"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7"
+                        android:id="@+id/send_btn"/>
+                </RelativeLayout>
+            </RelativeLayout>
+</FrameLayout>

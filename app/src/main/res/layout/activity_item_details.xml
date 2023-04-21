@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appforev">
+
+    <!-- ImageView for displaying an image of the item -->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Content here -->
+            <ImageView
+                android:id="@+id/item_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/wall" />
+            <TextView
+                android:id="@+id/item_line1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_image"
+                android:padding="16dp"
+                android:textColor="@color/yelforev"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- TextView for displaying the second line of the item -->
+            <TextView
+                android:id="@+id/item_line2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_line1"
+                android:padding="16dp"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <ImageButton
+
+                android:id="@+id/thumbs_up_button"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_corner_for_edittext"
+                android:clickable="true"
+                android:foreground="@drawable/baseline_thumb_up_off_alt_24" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+<objectAnimator
+    android:propertyName="cornerRadius"
+    android:valueTo="20dp"
+    android:valueType="floatType"
+    android:duration="500"
+    android:interpolator="@android:anim/decelerate_interpolator" />
+
+<objectAnimator
+    android:propertyName="layout_width"
+    android:valueTo="match_parent"
+    android:valueType="intType"
+    android:duration="500"
+    android:interpolator="@android:anim/decelerate_interpolator" />
+
+<objectAnimator
+    android:propertyName="layout_height"
+    android:valueTo="80dp"
+    android:valueType="intType"
+    android:duration="500"
+    android:interpolator="@android:anim/decelerate_interpolator"/>
+</set>

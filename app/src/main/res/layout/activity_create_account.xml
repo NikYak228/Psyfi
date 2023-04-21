@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFB600"
+    tools:context=".CreateAccountActivity">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login">
+    <ImageView
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="32dp"
+        android:id="@+id/sign_up_icon"
+        android:src="@drawable/vecteezy_user_icon_for_web_site_login_head_sign_icon_design_9890457"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sign_up_icon"
+        android:id="@+id/hello_text"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Greetings"
+            android:textStyle="bold"
+            android:textSize="32sp"
+            android:textColor="@color/appforev"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Давайте начнем."
+            android:textStyle="bold"
+            android:textSize="32sp"
+            android:textColor="@color/appforev"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginVertical="32dp"
+        android:id="@+id/form_lay"
+        android:layout_below="@id/hello_text">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:layout_marginHorizontal="15dp"
+            android:textSize="20sp"
+            android:textColorHint="#9F474338"
+            android:textColor="@color/appforev"
+            android:padding="16dp"
+            android:layout_marginTop="12dp"
+            android:id="@+id/email_edittext"
+            android:background="@drawable/rounded_corner_for_login"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Пароль"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="15dp"
+            android:textSize="20sp"
+            android:textColorHint="#9F474338"
+            android:textColor="@color/appforev"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:id="@+id/password_edittext"
+            android:background="@drawable/rounded_corner_for_login"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Подтвердите пароль"
+            android:inputType="textPassword"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="15dp"
+            android:textSize="20sp"
+            android:textColorHint="#9F474338"
+            android:textColor="@color/appforev"
+            android:padding="16dp"
+            android:id="@+id/confirm_password_edittext"
+            android:background="@drawable/rounded_corner_for_login"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/create_acc_btn"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginHorizontal="15dp"
+            android:backgroundTint="@color/button_background_color"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_corner_for_btn"
+            android:paddingVertical="12dp"
+            android:text="Создать аккаунт"
+            android:theme="@style/Button.White"
+            android:textSize="16sp"
+            app:rippleColor="#FF0000" />
+        <ProgressBar
+            android:layout_width="24dp"
+            android:layout_height="64dp"
+            android:id="@+id/progress_bar"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/form_lay"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/appforev"
+            android:text="Уже есть аккаунт?"/>
+
+        <TextView
+            android:id="@+id/login_text_botton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Войти"
+            android:textColor="@color/appforev"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

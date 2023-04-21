@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container"
+        app:layout_constraintTop_toTopOf="parent"
+
+        tools:ignore="NotSibling" />
+
+        <nl.joery.animatedbottombar.AnimatedBottomBar
+            android:id="@+id/bottom_navigation"
+            android:background="@color/appforev"
+            app:abb_tabColor="@color/darkyel"
+            app:abb_badgeTextColor="@color/yelforev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:abb_indicatorColor="@color/yelforev"
+            app:abb_tabColorSelected="@color/yelforev"
+            app:abb_tabColorDisabled="@color/darkyel"
+            app:abb_selectedTabType="text"
+            app:abb_indicatorAppearance="round"
+            app:abb_indicatorMargin="16dp"
+            app:abb_indicatorHeight="4dp"
+            app:abb_animationInterpolator="@android:anim/overshoot_interpolator"
+            app:abb_tabs="@menu/bootom_navig_menu"
+            app:abb_indicatorLocation="bottom"
+            android:layout_alignParentBottom="true"
+            app:abb_selectedIndex="1" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_navigation"
+        android:id="@+id/viewpager"/>
+
+</RelativeLayout>
