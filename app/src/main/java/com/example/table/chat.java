@@ -100,38 +100,38 @@ public class chat extends Fragment{
         addToChat(response,Message.SENT_BY_BOT);
     }
 
-    void callAPI(String question){
+    void callAPI(String question) {
         //okhttp
-        messageList.add(new Message("Typing... ",Message.SENT_BY_BOT));
+        messageList.add(new Message("Typing... ", Message.SENT_BY_BOT));
 
         JSONObject jsonBody = new JSONObject();
         try {
-            jsonBody.put("model","text-davinci-003");
-            jsonBody.put("prompt",question);
-            jsonBody.put("max_tokens",4000);
-            jsonBody.put("temperature",0);
+            jsonBody.put("model", "text-davinci-003");
+            jsonBody.put("prompt", question);
+            jsonBody.put("max_tokens", 4000);
+            jsonBody.put("temperature", 0);
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        RequestBody body = RequestBody.create(jsonBody.toString(),JSON);
+        RequestBody body = RequestBody.create(jsonBody.toString(), JSON);
         Request request = new Request.Builder()
                 .url("https://api.openai.com/v1/completions")
-                .header("Authorization","Bearer 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")
+                .header("Authorization", "Bearer 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")
                 .post(body)
                 .build();
 
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(@NonNull Call call, @NonNull IOException e) {
-                addResponse("Failed to load response due to "+e.getMessage());
+                addResponse("Failed to load response due to " + e.getMessage());
             }
 
             @Override
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
-                if(response.isSuccessful()){
-                    JSONObject  jsonObject = null;
+                if (response.isSuccessful()) {
+                    JSONObject jsonObject = null;
                     try {
-                        jsonObject = new JSONObject(Objects.requireNonNull(response.body()).string());
+                        jsonObject = new JSONObject(response.body().string());
                         JSONArray jsonArray = jsonObject.getJSONArray("choices");
                         String result = jsonArray.getJSONObject(0).getString("text");
                         addResponse(result.trim());
@@ -140,17 +140,13 @@ public class chat extends Fragment{
                     }
 
 
-                }else{
-                    addResponse("Failed to load response due to "+response.body().toString());
+                } else {
+                    addResponse("Failed to load response due to " + response.body().toString());
                 }
             }
         });
 
-
-
-
-
     }
 
 
-}
+    }
